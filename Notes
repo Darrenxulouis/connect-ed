@@ -1,0 +1,54 @@
+//Setup
+Install Node, Git, VsCode (text editor)
+
+Setup Mlab as Mongo
+
+Extensions used in VsCode are:
+- ES7 React/Redux/GraphQL... by dsznajder
+- Bracket Pair... by CoenraadS
+- Live Server by Ritwick Dey
+- Node.js Modules... by Zongmin Lie 
+- Prettier by Esben Petersen
+
+Create a root folder and run npm init
+- in a full stack application, entry point is usually set as server.js
+
+Install dependencies (npm i):
+- Express
+- Mongoose
+- Passport
+- Passport-jwt
+- jsonwebtoken
+- body-parser
+- bcryptjs
+- validator
+
+All installed dependencies will be reflected in package.json
+
+install dev dependency by npm i -D:
+- Nodemon
+
+
+//Server Setup
+create server.js in root folder
+
+imperative to define express using const app = express();
+
+express needs to have a get
+app.get('/', (req,res) => res.send('Hello')); 
+This will return hello from the response
+
+we also need to define a port
+const port = process.env.PORT || 5000;
+
+and express needs to have a listen
+app.listen(port, ()=> console.log("listening on port"));
+
+//MongoDB setup
+mongoose
+  .connect(db)
+  .then(() => console.log("MongoDB Connected"))
+  .catch(err => console.log(err));
+
+  mongoose.connect() is a promised based. Therefore, if successful, it will return a promise (.then()).
+  if not, it will return an error from catch
