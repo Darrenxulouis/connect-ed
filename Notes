@@ -52,3 +52,88 @@ mongoose
 
   mongoose.connect() is a promised based. Therefore, if successful, it will return a promise (.then()).
   if not, it will return an error from catch
+
+  npm install needed for gravitar
+
+  passport is an authentication module used to authenticate users. JWT is one of the option that can be used with passport. Others being Google OAuth, and many more
+
+  passport config file can also be referred to as "Strategy"
+
+  Arrow function does not need curly braces or return to return something
+
+  Common node does not work well with ES6 import. A fix for "import a from './a' can be 'const a = require('./a');
+
+  validator.isEmpty() will only check if the String is empty. It does not check for null or untouched variable. Therefore, a custom function to validate whether the string is null( and if it is, return empty string) is required
+
+  validation error is 400
+
+  Authorization error is 401
+
+  //Front end Setup
+  concurrently, bootstrap, font awesome, chrome extensions: redux and react extension tools
+
+  react-router-dom
+  axios(master)
+  classnames(client)
+
+  Binding of state and html field is not required if the "onChange" method is written as an arrow function
+
+  adding proxy value in client package.json "proxy": "http://localhost:5000" allows for 
+  axios.post("/api/users/register",newUser) instead of 
+  axios.post("http://localhost:5000/api/users/register", newUser)
+  
+  Destructuring:
+  const { errors } = this.state;
+  is the same as
+  const errors = this.state.errors
+
+  classnames use:
+  <h1 className={classnames("form-control form-control-lg", {"is-invalid":errors.name})}/>
+  classnames(default classes, {additional class}) -- The additional class will only be applied if the variable exists, which in this case errors.name
+
+  for the error message:
+  {errors.name && (
+                    <div className="invalid-feedback">{errors.name}</div>
+                  )}
+  only show true if errors.name is true.
+
+  In a condition such as this expression, {a && b}, b will be returned if both values are true
+
+  more Modules in client
+  - Redux
+  - React-redux
+  - Redux-thunk
+
+Provider, which is imported from react-redux allow our react application to have a store which has to wrap around everything. 
+
+<Provider store={store}> is required for provider to work
+
+remember to initialize store by "const store = createStore(rootreducer,initialState,middleware)" function
+
+thunk is a middleware
+
+import connect is compulsory to use Redux
+
+In redux, all actions that we bring in will be stores in props. Therefore, we call props to call the action
+
+Lecture 41,
+Register.PropTypes..
+Any property you have needs to be register to PropTypes. Register, in this case is a component that contains two properties which are registerUser and Auth
+
+local storage only store strings
+
+
+in client, we need jwt-decode from npm
+
+//If you want to redirect from action, withRouter is needed
+
+when we bring in a component, we do not use curly braces in import
+
+react-moment is a package to format dates
+
+react-moment requires moment package
+
+backtick instead of quote allows us to use template literal which allows us to insert expressions or use variables
+
+Lecture 66 this.refs.myref???
+Types of different components??
